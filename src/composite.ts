@@ -3,7 +3,6 @@ import { decorate, decoratorOf } from '@itrocks/decorator/property'
 
 const COMPOSITE = Symbol('composite')
 
-export default Composite
 export function Composite<T extends object>(value = true)
 {
 	return decorate<T>(COMPOSITE, value)
