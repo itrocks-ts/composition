@@ -6,7 +6,7 @@
 	"dependencies": {
 		"@itrocks/class-type": "latest",
 		"@itrocks/decorator": "latest",
-		"typescript": "~5.6"
+		"typescript": "~5.8"
 	},
 	"description": "Manage and query composite and component property structures",
 	"devDependencies": {
@@ -48,5 +48,5 @@
 		"build:esm": "tsc -p tsconfig.esm.json && node esm/esm"
 	},
 	"types": "./esm/composition.d.ts",
-	"version": "0.0.4"
+	"version": "0.0.5"
 }
