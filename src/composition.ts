@@ -1,2 +1,2 @@
-export * from './component'
-export * from './composite'
+export { Component, componentOf } from './component'
+export { Composite, compositeOf } from './composite'

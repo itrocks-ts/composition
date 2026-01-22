@@ -13,6 +13,10 @@ Manage and query composite and component property structures.
 This module facilitates the creation of composite and component relationships
 within TypeScript classes using decorators.
 
+Concepts:
+- A component is owned by a composite.
+- A composite references its owner.
+
 ## Installation
 
 ```bash
@@ -67,6 +71,9 @@ const car = new Car(
 )
 ```
 
+**Note:**\
+Decorators only describe relationships; assigning references remains explicit.
+
 ### Verifying Components and Composites
 
 You can check if properties are marked as components or composites:
@@ -92,7 +99,7 @@ A decorator to mark a property as a component.
 
 **Parameters:**
 - `value` (boolean, default: true):
-  Activates or deactives the property as a component.
+  Activates or deactivates the property as a component.
   Setting this value to `false` overrides a `true` value on the same property on a parent class.
 
 **Usage:**
@@ -108,7 +115,7 @@ class Car {
 ```ts
 componentOf<T extends object>(target: ObjectOrType<T>, property: KeyOf<T>): boolean
 ```
-Checks whether a property is marked as a [Component](#component).
+Checks whether a property is marked as a [component](#component).
 
 **Parameters:**
 - `target` ([ObjectOrType](https://github.com/itrocks-ts/class-type#objectortype)):
@@ -117,7 +124,7 @@ Checks whether a property is marked as a [Component](#component).
   The name of the property to verify.
 
 **Returns:**
-`boolean`: `true` if the property is marked as a [Component](#component), `false` otherwise.
+`boolean`: `true` if the property is marked as a [component](#component), `false` otherwise.
 
 **Usage:**
 ```ts
@@ -158,7 +165,7 @@ Checks whether a property is marked as a [composite](#composite).
   The name of the property to verify.
 
 **Returns:**
-`boolean`: `true` if the property is marked as a [Composite](#composite), `false` otherwise.
+`boolean`: `true` if the property is marked as a [composite](#composite), `false` otherwise.
 
 **Usage:**
 ```ts
